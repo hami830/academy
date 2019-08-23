@@ -3,10 +3,10 @@ import psycopg2 as psy
 def ConnexionDB():
     try:
         #Connexion à la base de données
-        connection = psy.connect(user="postgres",password="H@midou8",
-                                    host="localhost",
+        connection = psy.connect(user="klngeopiredktj",password="34274a36b04c95fcc8e00e1ec5cc02b0b98c2a6ea8344c9b7812f7fab53870ba",
+                                    host="ec2-107-20-155-148.compute-1.amazonaws.com",
                                     port="5432",
-                                    database="sonatel4" 
+                                    database="daj9a8ti9j8qdv" 
                                     )
         return connection
     except (Exception) as error :
