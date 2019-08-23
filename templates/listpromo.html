@@ -1,0 +1,39 @@
+
+{% extends 'index0.html' %}
+
+{% block content %}
+<div id="liste">
+        <style>
+            #liste{
+                margin-left: 500px;
+                background-color:rgb(10, 216, 137); 
+                text-align: center;
+                width: 800px;
+            }
+        </style>
+
+                    <table class="table table-striped">
+                        <tr>
+                            <th><h2>id_promo</h2></th>
+                            <th><h2>nom_promo</h2></th>
+                            <th><h2>date_debut</h2></th>
+                            <th><h2>date_fin</h2></th>
+                            <th><h2>id_ref</h2></th>
+                           
+                        </tr>
+                        {% for row in promotion %}
+                        <tr>
+                            <td>{{row.0}}</td>
+                            <td>{{row.1}}</td>
+                            <td>{{row.2}}</td>
+                            <td>{{row.3}}</td>
+                            <td>{{row.4}}</td>
+                            
+                        </tr>
+                        {% endfor%}
+                    </table>
+                </div>
+            </div>
+        </div>
+
+{% endblock content %}

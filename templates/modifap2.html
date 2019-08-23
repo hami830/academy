@@ -1,0 +1,105 @@
+
+{% extends 'index0.html' %}
+{% block content %}
+<div id="liste">
+        <style>
+            #liste{
+                margin-left: 500px;
+                background-color:rgb(10, 216, 137);;
+                text-align: center;
+                width: 780px;
+            }
+        </style>
+
+<div class="inscrit">
+        <div>
+            
+                <table class="table table-striped">
+                    <tr>
+                        <td>id_app</td>
+                        <td>matricule</td>
+                        <td>nom</td>
+                        <td>prenom</td>
+                        <td>date_naissance</td>
+                        <td>nom_promo</td>
+                        <td>Action</td>
+                        
+                    
+                       
+                    </tr>
+                    {% for row in l1 %}
+                    <tr>
+                        <td>{{row.0}}</td>
+                         <td>{{row.1}}</td>
+                        <td>{{row.2}}</td>
+                        <td>{{row.3}}</td>
+                        <td>{{row.4}}</td>
+                        <td>{{row.5}}</td>
+                        
+                        
+                        <td>
+                            <a href="/modifap2/{{row.0}}" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{row.0}}">Modifier</a>
+                        </td>
+                        
+                    </tr>
+                    {% endfor%}
+                </table>
+        
+        </div>
+    
+        
+         {% for row in l1 %}
+
+         
+            <div id="modaledit{{row.0}}" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Please Update Data</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="{{url_for('modifap2')}}" method="POST">
+                                    <div class="form-group">
+                                        <label>matricule:</label>
+                                        <input class="hidden" name="id_app" value=" {{row.0}}">
+                                        <input type="text" class="form-control" name="matricule" value="{{row.1}}">
+                                    </div>
+                                    <div class="form-group">
+                                            <label>nom:</label>
+                                            <input type="text" class="form-control" name="nom" value="{{row.2}}">
+                                    </div>
+                                    <div class="form-group">
+                                            <label>prenom:</label>
+                                            <input type="text" class="form-control" name="prenom" value="{{row.3}}">
+                                    </div>
+                                    <div class="form-group">
+                                            <label>date_naissance:</label>
+                                            <input type="date" class="form-control" name="date_naissance" value="{{row.4}}">
+                                    </div>                        
+                                     <div class="form-group">
+                                            <label>promo:</label>
+                                            <select name="id_promo" id="promo">
+                                            {% for lister2 in l2%}
+                                                    <option value="{{lister2[0]}}">{{lister2[1]}}</option>
+                                             {% endfor%}
+                                            </select><br><br>
+                                    </div>
+
+                                    <div class="form-group">
+                                            <button class="btn btn-primary" type="submit">Update Data</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                {% endfor%}
+            </div> 
+        
+
+{% endblock content %}

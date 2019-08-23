@@ -1,0 +1,30 @@
+
+{% extends 'index0.html' %}
+{% block content %}
+
+    <body>
+        {% block body %}
+        <div class="container">
+            <div class="row">
+                <div class="col md-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>id-ref</th>
+                            <th>nom_ref</th>
+                           
+                        </tr>
+                        {% for row in referentiel %}
+                        <tr>
+                            <td>{{row.0}}</td>
+                            <td>{{row.1}}</td>
+                            
+                        </tr>
+                        {% endfor%}
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+        </body>
+    </html>
+{% endblock content %}

@@ -1,0 +1,49 @@
+
+{% extends 'index0.html' %}
+{% block content %}
+<div id="liste">
+    <style>
+        #liste{
+            margin-left: 500px;
+            background-color: rgb(10, 216, 137);
+            text-align: center;
+            width: 400px;
+            height: 250px;
+        }
+    </style>
+        <div class="inscrit">
+            <div>
+                
+                    <table class="table table table-sm table-striped table-bordered ">
+                        <tr>
+                           
+                            <td>matricule</td>
+                            <td>nom</td>
+                            <td>prenom</td>
+                            <td>date naissance</td>
+                            <td>promo</td>
+                            <td>Action</td>
+                            
+                           
+                        </tr>
+                        {% for row in l1 %}
+                            <tr>
+                                
+                                <td>{{row.1}}</td>
+                                <td>{{row.2}}</td>
+                                <td>{{row.3}}</td>
+                                <td>{{row.4}}</td>
+                                <td>{{row.5}}</td>
+                                
+                            
+                                <td>
+                                    <a href="/anulap/{{row.0}}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure To annuler?')">Annuler</a>
+                                </td>
+                                
+                            </tr>
+                        {% endfor%}
+                    </table>
+
+            </div>
+        </div>
+{% endblock content %}

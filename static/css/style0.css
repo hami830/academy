@@ -1,0 +1,159 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body{
+	font-family: Poppins;
+ 
+}
+.head{
+	margin-top: -15px;
+	background: rgb(76, 77, 76);
+	padding: 10px 15px;
+	color: rgb(175, 171, 170);
+	padding: 10px 70px;
+	font-size:30px;
+	/* border-top: 10px solid rgb(243, 243, 245); */
+	font-family: sans-serif;
+	text-align: center;
+	top: 15px;
+	height: 110px;
+	position: fixed;
+	width: 100%;
+}
+.milieu{
+	margin-left: 200px;
+	position: fixed;
+
+	float: right;
+	background-color: #37f;
+	width: 100px;
+	height: 0px;
+}
+.nav img{
+	float: left;
+	width: 219%;
+	height: 500%;
+
+}
+.wrapper{
+	width: 100%;
+	height: 100%;
+	margin-top: 100px;
+	 
+}
+nav{
+	position: fixed;
+	display: flex;
+	align-items: flex-start;
+	width: 16%;
+	height: 560px;
+	background-color:  rgb(76, 77, 76);
+	padding: 10px 15px;
+}
+.left-content{
+	position: fixed;
+	right: 0px;
+	width: 80%;
+	height: 100%;
+	background-color: #fff;
+	overflow:auto;
+	padding: 40px;
+}
+.left-content h1{
+	font-weight:bold;
+	margin-bottom: 50px;
+	font-size: 55px;
+	text-align: center;
+}
+li, label, ul, a{
+	width: 100%;
+	color: rgb(255, 255, 255);
+	display: block;
+	font-weight: bold;
+}
+.nav-area ul label {
+	height: 35px;
+}
+.nav-area ul li{
+	height: 35px;
+	overflow: hidden;
+	transition: all .4s;
+	display: block;
+	background-color: #bc832d;
+}
+.nav-area label{
+	font-size: 14px;
+	background-color: rgb(76, 77, 76);
+	padding: 10px 15px;
+	cursor: pointer;
+	transition: all .30s;
+}
+.nav-area a{
+	font-size: 12px;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	padding: 8px 25px;
+	transition: all .3s;
+}
+.Admin{
+	margin-top: 60px;
+	margin-left: 710px;
+	margin-right: -95px;
+	float: right;
+}
+.mage{
+	width: 80px;
+	height: 70px;	
+	float: left;
+
+}
+.mage1{
+	width: 80px;
+	height: 60px;
+	float: right;
+}
+.nav-area a:hover{
+	background-color: #262626;
+}
+.nav-area input[type=radio]{
+	display: none;
+}
+#SCOLARITÉ:checked + li, #RÉFÉRENTIEL:checked + li, #PROMOTION:checked + li{
+	height: 180px;
+}
+@media screen and (max-width: 600px) {
+	nav{
+		width: 100%;
+		position: relative;
+	}
+	.left-content h1{
+		font-size: 28px;
+	}
+	.left-content{
+		width: 100%;
+		position: relative;
+	}
+}
+.copyright{
+	text-align: center;
+	padding-right: 100px;
+	margin-right: 890px;
+}
+#fo{
+	/* margin-bottom: 0px; */
+	margin-left:170px;
+	margin-top: 460px;
+	background-color: rgb(76, 77, 76);
+	padding: 10px 15px;
+	height: 85px;
+	position:  fixed;
+	width: 100%;
+}
+#life{
+	margin-top: 90px;
+	text-align: center;
+	margin-right: 50px;
+}

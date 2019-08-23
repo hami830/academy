@@ -1,0 +1,6 @@
+fieldset {
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 25px;
+    box-shadow: 20px 10px 10px rgb(169, 169, 235);
+}

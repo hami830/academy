@@ -1,0 +1,18 @@
+{% extends 'index0.html' %} {% block content %}
+<!-- debut contenu page -->
+<fieldset>
+        <form method="post" id="registrer" action="">
+                <h2>Ajouter ici : </h2>
+                <label>Nom promo :</label><br>
+                <input type="text" name="nom" id="promo" placeholder="saisissez la promotion"><br> <br>
+                <label>Date debut :</label><br>
+                <input type="date" name="date_debut" placeholder="saisissez la date de debut "><br> <br>
+                <label>Date fin :</label><br>
+                <input type="date" name="date_fin" placeholder="saisissez la date de fin :"><br> <br>
+                <label>REFERENTIEL :</label><br>
+                <input type="texte" name="id_ref" placeholder="saisissez le referentiel :"><br> <br>
+                <input type="submit" value="submit" id="sub">
+        </form>
+</fieldset>
+
+{% endblock content %}

@@ -1,0 +1,76 @@
+
+
+
+
+
+
+
+
+
+
+
+{% extends 'index0.html' %} 
+
+{% block content %} 
+<div id="liste">
+    <style>
+        #liste{
+            margin-left: 450px;
+            background-color: rgb(58, 172, 158);
+            text-align: center;
+            width: 590px;
+        }
+    </style>
+<table class="table table-striped">
+        <tr  class="info">
+            <th>id_ref</th>
+            <th>nom_ref</th>
+            <th>action</th>
+        </tr>
+        {% for row in apprenant %}
+        <tr>
+            <td>{{row.0}}</td>
+            <td>{{row.1}}</td>
+            <td>
+                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        Launch demo modal
+      </button>
+      
+                
+            </td>      
+        </tr>
+        {% endfor%}
+    </table>
+</div>
+{% for row in apprenant %}
+</div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor%}
+</div>
+<script type="text/javascript"  href="../static/js/bootstrap.min.js" ></script>
+<script type="text/javascript"  href="../static/js/jquery-3.4.1.js" ></script>
+<script>
+    $(document).ready(function(){
+        $('#myModal').modal(options);
+    });   
+</script>
+{% endblock content %}

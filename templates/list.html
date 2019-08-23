@@ -1,0 +1,32 @@
+{% extends 'index0.html' %} 
+
+{% block content %} 
+<div id="liste">
+    <style>
+        #liste{
+            margin-left: 500px;
+            background-color: rgb(21, 95, 85);
+            text-align: center;
+            width: 400px;
+        }
+    </style>
+<table class="table table-striped">
+        <tr  class="info">
+            <th>id_promo</th>
+            <th>nom_promo</th>
+            <th>date_debut</th>
+            <th>date_fin</th>
+            <th>id_ref</th>
+        </tr>
+        {% for row in apprenant %}
+        <tr>
+            <td>{{row.0}}</td>
+            <td>{{row.1}}</td>
+            <td>{{row.2}}</td>
+            <td>{{row.3}}</td>
+            <td>{{row.4}}</td>
+        </tr>
+        {% endfor%}
+    </table>
+</div>    
+    {% endblock content %} 
